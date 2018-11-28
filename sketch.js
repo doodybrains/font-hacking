@@ -35,7 +35,7 @@ function drawNewType(cmds) {
         cy = cmd.y;
         break;
       case 'L':
-        stroke(118,49,49);
+        // stroke(118,49,49);
         strokeWeight(3);
         line(cx, cy, cmd.x, cmd.y);
         cx = cmd.x;
@@ -46,17 +46,19 @@ function drawNewType(cmds) {
         vertex(cx, cy);
         quadraticVertex(cmd.x, cmd.y, cmd.x, cmd.y);
         
-        stroke('rgb(70,146,70)');
+        // stroke('rgb(70,146,70)');
         strokeWeight(10);
 
         
         if (cy < 190) {
-          stroke('rgb(135,214,238)');
-          strokeWeight(13);
+          // stroke('rgb(135,214,238)');
+          quadraticVertex(cmd.x, cmd.y, cmd.x, cmd.y);
+
+          strokeWeight(2);
         }
 
         if (cy < 140) {
-          stroke('rgb(253,244,43)');
+          // stroke('rgb(253,244,43)');
           strokeWeight(40);
         }
 
